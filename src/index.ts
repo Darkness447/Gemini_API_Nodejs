@@ -1,11 +1,12 @@
-import express, { Request, Response } from 'express';
-import userRouter from './app/router/route';
+import express from 'express';
+import geminiRouter from './app/router/gemini/route';
 
 
 const app = express();
 
 // routers
-app.use(userRouter)
+app.use(express.json())
+app.use(geminiRouter)
 
 
 const port = process.env.PORT || 3000;
